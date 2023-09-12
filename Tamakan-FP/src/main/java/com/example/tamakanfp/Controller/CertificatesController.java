@@ -19,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/api/v1/files")
 public class CertificatesController {
 
-    private CertificatesService certificatesService ;
+    private final CertificatesService certificatesService ;
 
     @GetMapping("/get-certificate-by-jobSeekerid/{jobSeekr_id}")
     public ResponseEntity getCertificatebyjobSeeker(@AuthenticationPrincipal User user, @PathVariable Integer jobSeekr_id){
@@ -28,14 +28,14 @@ public class CertificatesController {
     }
 
     @PostMapping("/add-certificate/{job_application}")
-    public ResponseEntity<?> uploadImage( @AuthenticationPrincipal User user,@PathVariable Integer job_application, @RequestParam("file")MultipartFile file) throws IOException {
+    public ResponseEntity uploadImage(@AuthenticationPrincipal User user, @PathVariable Integer job_application, @RequestParam("file")MultipartFile file) throws IOException {
         return ResponseEntity.status(HttpStatus.OK).body(certificatesService.uploadFile(user.getId(),job_application,file));
     }
 
 
     //Authintcatio jobseeker job provider
     @GetMapping("/download-certificate/{fileName}")
-    public ResponseEntity<?> downloadImage(@AuthenticationPrincipal User user,@PathVariable String fileName){
+    public ResponseEntity downloadImage(@AuthenticationPrincipal User user,@PathVariable String fileName){
         return ResponseEntity.status(HttpStatus.OK)
                 .contentType(MediaType.valueOf(MediaType.APPLICATION_PDF_VALUE))
                 .body(certificatesService.downloadFile(user.getId(), fileName));

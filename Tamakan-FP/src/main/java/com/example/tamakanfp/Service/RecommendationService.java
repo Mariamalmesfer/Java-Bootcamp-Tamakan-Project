@@ -63,7 +63,7 @@ public class RecommendationService {
             throw new ApiException("job application status is not accepted or the job period is not done yet! ");
         }
 
-        Recommendation recommendation = new Recommendation(null, recommendationDTO.getReccomendation(), recommendationDTO.getCompany(), null);
+        Recommendation recommendation = new Recommendation(null, recommendationDTO.getReccomendation(), null, null);
 
         recommendation.setCompany(jobsApp.getJob().getJobProvider().getName());
         recommendation.setJobApplication(jobsApp);

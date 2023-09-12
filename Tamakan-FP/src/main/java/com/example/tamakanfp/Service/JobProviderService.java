@@ -28,7 +28,7 @@ public class JobProviderService {
         JobProvider jobProvider=new JobProvider(null,jobProviderDTO.getName(),jobProviderDTO.getPhoneNumber(),jobProviderDTO.getCity(),jobProviderDTO.getAddress(),jobProviderDTO.getSector(),jobProviderDTO.getLicense(),"pending",user1,null);
         user1.setJopProvider(jobProvider);
 
-        jobProviderRepository.save(jobProvider);
+        //jobProviderRepository.save(jobProvider);
         userRepository.save(user1);
     }
     public  void  updateJobProvider (Integer user_id ,JobProviderDTO jobProviderdto){
@@ -67,7 +67,7 @@ public class JobProviderService {
         JobProvider provider = jobProviderRepository.findJopProviderById(providerId);
         if(user == null || provider ==null)
             throw new ApiException("user or provider not found");
-        if( !user.getRole().equals("amdin"))
+        if( !user.getRole().equals("admin"))
             throw new ApiException("Don't allow verify a Job Provider");
 
         provider.setStatus("verify");

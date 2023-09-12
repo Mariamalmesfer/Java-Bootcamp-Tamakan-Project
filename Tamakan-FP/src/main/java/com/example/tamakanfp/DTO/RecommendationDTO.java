@@ -15,11 +15,11 @@ import lombok.Setter;
 @Valid
 public class RecommendationDTO {
 
-    @NotEmpty(message = "Reccomendation must not be empty")
+    @NotEmpty(message = "reccomendation must not be empty")
     @Column(columnDefinition = "varchar(255) not null")
     private  String reccomendation;
 
-    @NotEmpty(message = "Reccomendation must not be empty")
-    @Column(columnDefinition = "varchar(25) not null")
+    //@NotEmpty(message = "company must not be empty")
+    @Column(columnDefinition = "varchar(25)")
     private String company;
 }

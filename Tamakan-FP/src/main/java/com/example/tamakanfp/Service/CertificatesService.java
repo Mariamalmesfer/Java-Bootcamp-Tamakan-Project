@@ -20,10 +20,10 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class CertificatesService {
-    private CertificatesRepository certificatesRepository;
+    private final CertificatesRepository certificatesRepository;
     private final JobApplicationRepository jobApplicationRepository;
-    private final JobSeekerRepository jobSeekerRepository;
     private final UserRepository userRepository;
+    private final JobSeekerRepository jobSeekerRepository;
     private final JobProviderRepository jobProviderRepository;
 
     //add authentication to job provider to add certificates and recommendation
@@ -82,6 +82,7 @@ public class CertificatesService {
         certificatesRepository.save(imageData);
 
         return "file uploaded successfully : " + file.getOriginalFilename();
+
 
 
 
