@@ -68,5 +68,7 @@ URL: [canva link](https://www.canva.com/design/DAFuIerps88/OU0CPTI1rU1SGJOjQjHFr
      * one to many (job provoder and job)
 * Security
      * Applied Security Authority for all my functions
+* Test
+     * JobControllerTest
 
 
