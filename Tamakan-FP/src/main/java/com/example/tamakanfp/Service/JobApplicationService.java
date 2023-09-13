@@ -30,7 +30,7 @@ public class JobApplicationService {
         if (job==null ||seeker==null ||user==null)
             throw new ApiException("Job or seeker or user not found");
 
-        if (application!=null || seeker.getJobSeekerProfile() ==null)
+        if (application!=null || seeker.getJobSeekerProfile() ==null || job.getStatus().equals("unavailable"))
             throw new ApiException("Can't apply the job");
 
         JobApplication jobApplication=new JobApplication(null,"in-progress",job,seeker,null,null);
