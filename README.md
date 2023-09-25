@@ -35,8 +35,3 @@ Job Seeker: https://www.figma.com/file/bSVDkRqbryoEFuZGzGXG8v/Tamakan-Job-Seeker
 # Canva Presentation
 https://www.canva.com/design/DAFuIerps88/OU0CPTI1rU1SGJOjQjHFrA/edit?utm_content=DAFuIerps88&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-
-
-- Junit testing
-    -JobApplicationRepositoryTest
-
