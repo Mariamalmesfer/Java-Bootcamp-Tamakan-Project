@@ -35,40 +35,7 @@ Job Seeker: https://www.figma.com/file/bSVDkRqbryoEFuZGzGXG8v/Tamakan-Job-Seeker
 # Canva Presentation
 https://www.canva.com/design/DAFuIerps88/OU0CPTI1rU1SGJOjQjHFrA/edit?utm_content=DAFuIerps88&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-# My Role
-- Functions
-  - get-application-by -Job-Id
-  - get-application-by-job-uni-and-Job-Id
-  - get-Application-by-major-and-job-id
-  - get-apaplication-by-GPA
-  - sort-job-application-by-GPA
-  - get-application-by-status-and-job-id
-  - get-application-by-status-and-jobseeker-id
-  - accept-job-application-by-job-provide
-  - regester-jobProvider
-  - logout-jobProvider
-  - update-job-provider
-  - regester-jobSeeker
-  - logout-jobSeeker
-  - update-jobSeeker
-  - send-email-to-jobSeekers
 
-- Model
-  - JobSeeker
-  - JobProvider
-  - User
-  - JobProviderDTO
-  - JobSeekerDTO
-  - JobSeekerProfileDTO
-    
-- Relations
-  - one to one (user and job seeker)
-  - one to one(user and job provider)
-  - one to one (job seeker and job seeker profile)
-  - one to many (job seeker and job applications )
-
-- Security
-  - Applied Security Authority and Authentication for all my functions
 
 - Junit testing
     -JobApplicationRepositoryTest
